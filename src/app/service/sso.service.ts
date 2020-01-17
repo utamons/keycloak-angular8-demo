@@ -1,21 +1,20 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {tap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class SsoService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  url = 'http://localhost:8080/api/test';
+  url = 'http://localhost:4200/api/test';
 
-  getTest() {
+  getTest(): Observable<string> {
     const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
+      responseType: 'text'
     };
-    return this.http.get<{}>(this.url, httpOptions).pipe(
-      tap(() => console.log(`got status`))
-    );
+    return this.http.get(this.url, {responseType: 'text'})
+      .pipe();
   }
 }

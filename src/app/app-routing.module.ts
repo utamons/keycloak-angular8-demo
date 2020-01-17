@@ -8,18 +8,18 @@ const routes: Routes = [
   {
     path: '', redirectTo: '/home', pathMatch: 'full',
     canActivate: [AppAuthGuard],
-    data: {roles: ['Role_CLIENT', 'admin']}
+    data: {roles: ['USER1', 'USER2']}
   },
   {
     path: 'index.html', redirectTo: '/home', pathMatch: 'full',
     canActivate: [AppAuthGuard],
-    data: {roles: ['Role_CLIENT', 'admin']}
+    data: {roles: ['USER1', 'USER2']}
   },
   {
     path: 'home',
     component: MainComponent,
     canActivate: [AppAuthGuard],
-    data: {roles: ['Role_CLIENT', 'admin']}
+    data: {roles: ['USER1', 'USER2']}
   }
 ];
 

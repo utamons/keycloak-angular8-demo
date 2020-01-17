@@ -11,8 +11,4 @@ export class AppComponent {
   title = 'Keycloak Demo (Angular 8)';
 
   constructor(private ssoService: SsoService) {}
-
-  getTest() {
-    return this.ssoService.getTest();
-  }
 }

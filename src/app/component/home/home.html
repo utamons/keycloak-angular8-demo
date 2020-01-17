@@ -1,5 +1,9 @@
 <div id="main">
   <div id="workArea">
-    Home
+    {{this.loggedIn}}.{{this.test}}
+    <div id="logout">
+      <button (click)="logout()">Logout</button>
+      <button (click)="getApiTest()">API test</button>
+    </div>
   </div>
 </div>
