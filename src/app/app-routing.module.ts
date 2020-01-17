@@ -1,15 +1,25 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {AppAuthGuard} from './guard/app.auth.guard';
-import {AppComponent} from './app.component';
+import {MainComponent} from './component/home/home';
 
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent ,
+    path: '', redirectTo: '/home', pathMatch: 'full',
     canActivate: [AppAuthGuard],
-    data: { roles: ['Role_CLIENT' , 'admin'] }
+    data: {roles: ['Role_CLIENT', 'admin']}
+  },
+  {
+    path: 'index.html', redirectTo: '/home', pathMatch: 'full',
+    canActivate: [AppAuthGuard],
+    data: {roles: ['Role_CLIENT', 'admin']}
+  },
+  {
+    path: 'home',
+    component: MainComponent,
+    canActivate: [AppAuthGuard],
+    data: {roles: ['Role_CLIENT', 'admin']}
   }
 ];
 
@@ -18,4 +28,5 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [AppAuthGuard]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

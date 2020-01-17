@@ -7,10 +7,12 @@ import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
 import {initializer} from './util/app-init';
 import {HttpClientModule} from '@angular/common/http';
 import {SsoService} from './service/sso.service';
+import {MainComponent} from './component/home/home';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
