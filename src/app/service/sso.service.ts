@@ -8,13 +8,16 @@ export class SsoService {
   constructor(private http: HttpClient) {
   }
 
-  url = 'http://localhost:4200/api/test';
+  urlUser1 = 'http://localhost:4200/api/user1';
+  urlUser2 = 'http://localhost:4200/api/user2';
 
-  getTest(): Observable<string> {
-    const httpOptions = {
-      responseType: 'text'
-    };
-    return this.http.get(this.url, {responseType: 'text'})
+  getUser1(): Observable<string> {
+    return this.http.get(this.urlUser1, {responseType: 'text'})
+      .pipe();
+  }
+
+  getUser2(): Observable<string> {
+    return this.http.get(this.urlUser2, {responseType: 'text'})
       .pipe();
   }
 }

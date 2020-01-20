@@ -1,9 +1,11 @@
 <div id="main">
   <div id="workArea">
-    {{this.loggedIn}}.{{this.test}}
+    {{this.loggedIn}}
+    <p>{{this.test}}</p>
     <div id="logout">
       <button (click)="logout()">Logout</button>
-      <button (click)="getApiTest()">API test</button>
+      <button (click)="getApiUser1()">API user 1 test</button>
+      <button (click)="getApiUser2()">API user 2 test</button>
     </div>
   </div>
 </div>

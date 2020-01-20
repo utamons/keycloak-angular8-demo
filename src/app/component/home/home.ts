@@ -23,8 +23,18 @@ export class MainComponent {
     console.log('keycloakService ', keycloakService.getUserRoles());
   }
 
-  getApiTest() {
-    this.ssoService.getTest().subscribe(
+  getApiUser1() {
+    this.ssoService.getUser1().subscribe(
+      result => {
+        this.test = result;
+      },
+      error => {
+        this.test = error.error && error.error.message ? error.error.message : error.message;
+      });
+  }
+
+  getApiUser2() {
+    this.ssoService.getUser2().subscribe(
       result => {
         this.test = result;
       },
