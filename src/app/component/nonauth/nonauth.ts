@@ -16,7 +16,7 @@ export class NonAuthComponent {
   }
 
   getNonAuth() {
-    this.ssoService.getUser1().subscribe(
+    this.ssoService.getNonAuth().subscribe(
       result => {
         this.test = result;
       },
