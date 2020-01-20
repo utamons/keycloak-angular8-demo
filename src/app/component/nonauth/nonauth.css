@@ -1,0 +1,43 @@
+#error {
+  color: red;
+  font-size: small;
+  margin: 10px;
+  padding-top: 20px;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+#workArea {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 2px solid #445588;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px 20px 100px;
+}
+
+#nonauth {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  margin-top: 30px;
+  width: 300px;
+}
+
+#nonauth button {
+  display: block;
+  margin: 0 auto 10px;
+  width: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+

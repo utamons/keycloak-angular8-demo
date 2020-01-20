@@ -1,6 +1,5 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {tap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
 @Injectable()
@@ -10,6 +9,7 @@ export class SsoService {
 
   urlUser1 = 'http://localhost:4200/api/user1';
   urlUser2 = 'http://localhost:4200/api/user2';
+  urlNonAuth = 'http://localhost:4200/api/nonauth';
 
   getUser1(): Observable<string> {
     return this.http.get(this.urlUser1, {responseType: 'text'})
@@ -18,6 +18,11 @@ export class SsoService {
 
   getUser2(): Observable<string> {
     return this.http.get(this.urlUser2, {responseType: 'text'})
+      .pipe();
+  }
+
+  getNonAuth(): Observable<string> {
+    return this.http.get(this.urlNonAuth, {responseType: 'text'})
       .pipe();
   }
 }

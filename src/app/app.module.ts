@@ -8,11 +8,13 @@ import {initializer} from './util/app-init';
 import {HttpClientModule} from '@angular/common/http';
 import {SsoService} from './service/sso.service';
 import {MainComponent} from './component/home/home';
+import {NonAuthComponent} from './component/nonauth/nonauth';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    NonAuthComponent
   ],
   imports: [
     BrowserModule,
