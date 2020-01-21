@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {SsoService} from '../../service/sso.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-nonauth',
@@ -11,7 +12,7 @@ export class NonAuthComponent {
 
   test: string;
 
-  constructor(private ssoService: SsoService) {
+  constructor(private activatedRoute: ActivatedRoute, private ssoService: SsoService) {
     this.test = 'idle';
   }
 
