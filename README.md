@@ -12,7 +12,7 @@ You should install and configure Keycloak before to start, according to Keycloak
  * 'Access type': public
  * 'Standard flow enabled': true
  
- This demo is intended to call backend service, with the same OpenID authentication. Here's an implementation: https://github.com/utamons/keycloak-springboot-demo
+ This demo is intended to call a backend service, with the same OpenID authentication. Here's an implementation: https://github.com/utamons/keycloak-springboot-demo
  
  Use '_ng serve_' to start.
  
